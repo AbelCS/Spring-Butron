@@ -24,4 +24,5 @@ repositories {
 
 dependencies {
 	compile("org.springframework.boot:spring-boot-starter-thymeleaf")
+	compile("org.springframework.data:spring-data-jpa:1.6.2.RELEASE")
 }

@@ -1,10 +1,16 @@
 package net.belisoft.butron.model;
 
+import org.springframework.data.jpa.domain.AbstractPersistable;
 import org.springframework.stereotype.Component;
 
+@Entity
 @Component
-public class CachopoDeCecina implements Cachopo {
+public class CachopoDeCecina extends AbstractPersistable<Long> implements
+		Cachopo {
 
+	private static final long serialVersionUID = -8517448705443716892L;
+
+	@Column(unique = true)
 	private String tipo;
 
 	public CachopoDeCecina() {
