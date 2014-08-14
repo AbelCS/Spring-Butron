@@ -1,0 +1,27 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'spring-boot'
+
+buildscript {
+    repositories {
+        maven { url "http://repo.spring.io/libs-release" }
+        mavenLocal()
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.1.5.RELEASE")
+    }
+}
+
+jar {
+    baseName = 'butron'
+    version =  '0.1.0'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+	compile("org.springframework.boot:spring-boot-starter-thymeleaf")
+}
